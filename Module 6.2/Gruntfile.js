@@ -23,7 +23,7 @@ module.exports = function(grunt) {
       }
     },
     watch: {
-    scripts: {
+      scripts: {
         files: ['sass/*.sass'],
         tasks: ['sass'],
         options: {
@@ -50,7 +50,7 @@ module.exports = function(grunt) {
         options: {
           watchTask: true,
           server: {
-            baseDir: "./"
+            server: './'
           }
         }
       }
@@ -63,5 +63,5 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-connect');
   grunt.loadNpmTasks('grunt-browser-sync');
   // Default task(s).
-  grunt.registerTask('default', ['sass', 'imagemin', 'connect', 'browserSync']);
+  grunt.registerTask('default', ['sass', 'imagemin', 'connect', 'browserSync', 'watch']);
 };
