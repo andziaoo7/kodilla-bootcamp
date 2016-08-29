@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game</title>
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+  </head>
+  <body>
+    <div class="game-content">
+      <header class="header-content">
+        <h1>Let's play <br>Rock, Paper, Scissors!</h1>
+        <button class="btn btn-success" onClick="newGame()">New game</button>
+      </header>
+      <section>
+        <button class="rock btn btn-default pick-button" data-toggle="tooltip" data-placement="bottom" title="I choose rock" onclick="playerPick('rock')"><i class="fa fa-hand-rock-o fa-5x"></i></button>
+        <button class="paper btn btn-default pick-button" data-toggle="tooltip" data-placement="bottom" title="I choose paper" onclick="playerPick('paper')"><i class="fa fa-hand-paper-o fa-5x"></i></button>
+        <button class="scissors btn btn-default pick-button" data-toggle="tooltip" data-placement="bottom" title="I choose scissors" onclick="playerPick('scissors')"><i class="fa fa-hand-scissors-o fa-5x"></i></button>
+      </section>
+    </div>
+    <aside>
+      <h3>Current round</h3> <br>
+      Computer picked <span id="computerPick"></span> <br>
+      Player picked <span id="playerPick"></span> <br>
+      Result: <span id="gameResult"></span>
+      <table class="table table-bordered table-striped">
+        <thead>
+          <tr>
+            <th colspan="2" class="text-center">Game results</th>
+          </tr>
+          <tr>
+            <th id="playerName">Player</th>
+            <th>Computer</th>
+          </tr>
+        </thead>
+        <tbody><tr>
+          <td id="playerScore">0</td>
+          <td id="computerScore">0</td>
+        </tr></tbody>
+      </table>
+      <p id="roundResult"></p>
+    </aside>
+    <!-- <footer></footer> -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="script.js"></script>
+  </body>
+</html>
