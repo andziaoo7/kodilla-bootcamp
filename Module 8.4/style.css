@@ -44,11 +44,16 @@ aside {
   position: absolute;
   top: 0;
   bottom: 0;
-  text-align: center;
+  padding: 20px;
+  font-size: 18px;
 }
 aside, .game-content {
   display: inline-block;
 }
 h3 {
   padding-top: 50px;
+  font-weight: bold;
+}
+.table {
+  margin-top: 40px;
 }
