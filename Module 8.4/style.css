@@ -52,8 +52,31 @@ aside, .game-content {
 }
 h3 {
   padding-top: 50px;
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: bold;
+}
+.score-panel {
+  margin: 0 20px 0 10px;
+}
+.score-panel span {
+  float: right;
+}
+#gameResult {
   font-weight: bold;
 }
 .table {
-  margin-top: 40px;
+  margin: 40px 0 60px 0;
+}
+.table-players {
+  width: 50%;
+}
+.winner {
+  text-transform: uppercase;
+  font-weight: bold;
+  text-align: center;
+  font-size: 30px;
+}
+.pick-button {
+  visibility: hidden;
 }

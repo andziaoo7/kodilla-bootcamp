@@ -23,27 +23,30 @@
     </div>
     <aside>
       <h3>Current round</h3> <br>
-      Computer picked <span id="computerPick"></span> <br>
-      Player picked <span id="playerPick"></span> <br>
-      Result: <span id="gameResult"></span>
+      <div class="score-panel"><p>Player picked: <span id="playerPick"></span></p></div>
+      <div class="score-panel"><p>Computer picked: <span id="computerPick"></span></p></div>
+      <div class="score-panel"><p>Result: <span id="gameResult"></span></p></div>
       <table class="table table-bordered table-striped">
         <thead>
           <tr>
             <th colspan="2" class="text-center">Game results</th>
           </tr>
           <tr>
-            <th id="playerName">Player</th>
-            <th>Computer</th>
+            <th id="playerName" class="table-players">Player</th>
+            <th class="table-players">Computer</th>
           </tr>
         </thead>
-        <tbody><tr>
-          <td id="playerScore">0</td>
-          <td id="computerScore">0</td>
-        </tr></tbody>
+        <tbody>
+          <tr>
+            <td id="playerScore">0</td>
+            <td id="computerScore">0</td>
+          </tr>
+        </tbody>
       </table>
-      <p id="roundResult"></p>
+      <div class="winner"><p id="roundResult"></p>
     </aside>
     <!-- <footer></footer> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <script type="text/javascript" src="script.js"></script>
   </body>
