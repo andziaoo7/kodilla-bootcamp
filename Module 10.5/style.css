@@ -1,0 +1,17 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  background-color: #A2D9CE;
+  color: #fff;
+}
+h1 {
+  padding-top: 100px;
+  margin-bottom: 50px;
+  text-align: center;
+}
+.container {
+  width: 1200px;
+  text-align: center;
+
+}
