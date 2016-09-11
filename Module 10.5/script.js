@@ -4,7 +4,7 @@ function Button(text){
 
 Button.prototype = {
   create: function() {
-     var self = this; //moze byc zmienna w fukcji click podana? NIE ! przed funkcją w ktorej traci sie kontekst (czyli tutaj ma to miejsce w funkcji create) musi byc zadeklarowana zmienna self
+    var self = this; //moze byc zmienna w fukcji click podana? NIE ! przed funkcją w ktorej traci sie kontekst (czyli tutaj ma to miejsce w funkcji create) musi byc zadeklarowana zmienna self
     this.$element = $("<button>").addClass('btn btn-primary');
     this.$element.text(this.text);
     this.$element.click(function(){
@@ -17,3 +17,5 @@ Button.prototype = {
 
 var btn1 = new Button("Hello!");
 btn1.create();
+
+// Konstrukcja this.$element ma za zadanie trzymać we właściwości element przycisk (element DOM), który stworzyliśmy za pomocą jQuery.
