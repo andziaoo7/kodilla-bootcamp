@@ -48,6 +48,7 @@ $(function(){
   function Card(){
     var self = this;
     this.id = randomString();
+    var description = description; //dodano bo description bylo not defined
     this.description = description;
     this.$element = createCard();
     function createCard(){
@@ -73,7 +74,7 @@ $(function(){
   var board = {
     name: 'Tablica Kanban',
     addColumn: function(column){
-      this.$element.append(column.$element);
+      this.element.append(column.$element); //wadliwy byl this.$element
       initSortable();
     },
     element: $('#board .column-container')
@@ -89,4 +90,21 @@ $(function(){
 	var column = new Column(name);
     	board.addColumn(column);
   });
+  // TWORZENIE KOLUMN - do edycji !!!
+  var todoColumn = new Column('Do zrobienia');
+  var doingColumn = new Column('W trakcie');
+  var doneColumn = new Column('Skończone');
+
+  // DODAWANIE KOLUMN DO TABLICY
+  board.addColumn(todoColumn);
+  board.addColumn(doingColumn);
+  board.addColumn(doneColumn);
+
+  // TWORZENIE NOWYCH EGZEMPLARZY KART
+  var card1 = new Card('Nowe zadanie');
+  var card2 = new Card('Stworzyc tablice kanban');
+
+  // DODAWANIE KART DO KOLUMN
+  todoColumn.addCard(card1);
+  doingColumn.addCard(card2);
 });
