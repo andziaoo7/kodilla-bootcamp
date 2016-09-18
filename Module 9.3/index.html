@@ -10,21 +10,22 @@
     <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
   </head>
   <body>
-    <header class="">
+    <header>
       <h1>jQuery Events</h1>
     </header>
     <div class="container">
-    <a href="#" onclick="imageSlide.next()" class="nextSlide"><i class="fa fa-chevron-left fa-3x" aria-hidden="true"></i></a>
-    <div id="carousel">
-      <ul>
-        <li class="slide active-slide"><img src="https://cdn.pbrd.co/images/CId0YmyJ.jpg" alt="first image"></li>
-        <li class="slide"><img src="https://cdn.pbrd.co/images/CJefaqlH.jpg" alt="second image"></li>
-        <li class="slide"><img src="https://cdn.pbrd.co/images/6frgqTMSz.jpg" alt="third image"></li>
-        <li class="slide"><img src="https://cdn.pbrd.co/images/6fmGdf2vt.jpg" alt="fourth image"></li>
-        <li class="slide"><img src="https://cdn.pbrd.co/images/6fv7MhRf2.jpg" alt="fifth image"></li>
-      </ul>
-    </div>
-    <!-- <i class="fa fa-chevron-right fa-3x" aria-hidden="true"></i> -->
+      <div id="carousel">
+        <ul id="slider">
+          <li class="slide active"><img src="https://cdn.pbrd.co/images/CId0YmyJ.jpg" alt="first image"></li>
+          <li class="slide"><img src="https://cdn.pbrd.co/images/CJefaqlH.jpg" alt="second image"></li>
+          <li class="slide"><img src="https://cdn.pbrd.co/images/6frgqTMSz.jpg" alt="third image"></li>
+          <li class="slide"><img src="https://cdn.pbrd.co/images/6fmGdf2vt.jpg" alt="fourth image"></li>
+          <li class="slide"><img src="https://cdn.pbrd.co/images/6fv7MhRf2.jpg" alt="fifth image"></li>
+        </ul>
+        <button id="prev">Previous</button>
+        <button id="next">Next</button>
+        <div style="clear:both"></div>
+      </div>
   </div>
     <!-- <footer></footer> -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
