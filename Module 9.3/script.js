@@ -12,6 +12,7 @@ $(function(){
   setInterval(function(){
     changeImage()}, 3000);
 });
+<<<<<<< HEAD
 
 var $firstImage = $('li:first'); //czemu $('li:first', 'ul')? po co jeszcze daje się 'ul'?
 var $lastImage = $('li:last');
@@ -30,3 +31,12 @@ $('#prev').click(function(){
   $active.removeClass('active').fadeOut('fast');
   $prev.addClass('active').fadeIn('fast');
 });
+=======
+// $('.nextSlide').click(function() {
+//     var currentSlide = $('.active-slide');
+//     var nextSlide = currentSlide.next();
+//
+//     currentSlide.removeClass('active-slide');
+//     nextSlide.addClass('active-slide');
+//   });
+>>>>>>> 42398cd4365deb4396a0a44cc5bbea2056eac6cf
