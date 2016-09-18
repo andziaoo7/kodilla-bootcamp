@@ -109,4 +109,6 @@ $(function(){
   todoColumn.addCard(card1);
   doingColumn.addCard(card2);
 });
-$('.column-card-list li').draggable();
+$(function(){
+  $('.column-card-list li').draggable();
+});
