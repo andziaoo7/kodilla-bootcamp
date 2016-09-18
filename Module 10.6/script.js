@@ -19,8 +19,8 @@ $(function(){
       var $column = $('<div>').addClass('column');
       var $columnTitle = $('<h2>').addClass('column-title').text(self.name);
       var $columnCardList = $('<ul>').addClass('column-card-list');
-      var $columnDelete = $('<button>').addClass('btn-delete').text('x');
-      var $columnAddCard = $('<button>').addClass('add-card').text('Dodaj kartę');
+      var $columnAddCard = $('<button>').addClass('add-card btn btn-success').text('Nowe zadanie');
+      var $columnDelete = $('<button>').addClass('btn-delete btn btn-danger').text('Usuń zadania');
 
       $columnDelete.click(function(){
         self.removeColumn();
@@ -29,8 +29,8 @@ $(function(){
         self.addCard(new Card(prompt("Wpisz nazwę karty")));
       });
       $column.append($columnTitle)
-        .append($columnDelete)
         .append($columnAddCard)
+        .append($columnDelete)
         .append($columnCardList);
       return $column;
     };
@@ -45,22 +45,23 @@ $(function(){
   };
 
   // CARD
-  function Card(){
+  function Card(description){
     var self = this;
     this.id = randomString();
-    var description = description; //dodano bo description bylo not defined
+    //var description = description; //dodano bo description bylo not defined
     this.description = description;
     this.$element = createCard();
     function createCard(){
       var $card = $('<li>').addClass('card');
       var $cardDescription = $('<p>').addClass('card-description').text(self.description);
-      var $cardDelete = $('<button>').addClass('btn-delete').text('x');
+      var $cardDelete = $('<button>').addClass('btn-delete-task btn btn-default').text('x');
 
       $cardDelete.click(function(){
         self.removeCard();
       });
-      $card.append($cardDelete)
-        .append($cardDescription);
+      $card.append()
+        .append($cardDescription)
+        .append($cardDelete);
       return $card;
     };
   };
@@ -108,3 +109,4 @@ $(function(){
   todoColumn.addCard(card1);
   doingColumn.addCard(card2);
 });
+$('.column-card-list li').draggable();
