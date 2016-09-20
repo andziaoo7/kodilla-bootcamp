@@ -2,7 +2,26 @@
   box-sizing: border-box;
 }
 body {
-  background-color: lightblueł
+  background-image: url('http://s22.postimg.org/z714xjmyp/chucknorris.jpg');
+  background-size: cover;
   color: #fff;
   font-family: 'Lato', sans-serif;
+}
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+h1 {
+  text-align: center;
+  margin: 100px auto;
+  text-transform: uppercase;
+}
+p {
+  margin: 40px auto;
+  font-size: 20px;
+  height: 50px;
+}
+button {
+  text-transform: uppercase;
 }
