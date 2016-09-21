@@ -37,6 +37,7 @@ h1, h2 {
   margin: 10px 15px;
   padding: 10px;
   align-content: center;
+  min-height: 300px;
   height: auto;
 }
 .column h2 {
@@ -46,11 +47,19 @@ h1, h2 {
 .add-card, .btn-delete {
   flex-grow: 1;
   margin: 5% 10%;
-  width: 30%;
+  width: auto;
 }
 .card-description {
   width: 90%;
 }
 .btn-delete-task, .card-description {
   display: inline-flex;
+}
+.card-list {
+  min-height: 100px;
+}
+.card-placeholder {
+  height: 10px;
+  color: red;
+  background-color: yellow;
 }

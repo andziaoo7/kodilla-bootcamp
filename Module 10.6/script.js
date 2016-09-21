@@ -18,10 +18,10 @@ $(function(){
     function createColumn(){
       var $column = $('<div>').addClass('column');
       var $columnTitle = $('<h2>').addClass('column-title').text(self.name);
-      var $columnCardList = $('<ul>').addClass('column-card-list');
+      var $columnCardList = $('<ul>').addClass('card-list');
       var $columnAddCard = $('<button>').addClass('add-card btn btn-success').text('Nowe zadanie');
       var $columnDelete = $('<button>').addClass('btn-delete btn btn-danger').text('Usuń zadania');
-
+      console.log($('.column-card-list'));
       $columnDelete.click(function(){
         self.removeColumn();
       });
@@ -108,7 +108,4 @@ $(function(){
   // DODAWANIE KART DO KOLUMN
   todoColumn.addCard(card1);
   doingColumn.addCard(card2);
-});
-$(function(){
-  $('.column-card-list li').draggable();
 });
