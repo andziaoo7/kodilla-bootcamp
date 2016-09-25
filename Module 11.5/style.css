@@ -1,0 +1,50 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  background-color: #00aced;
+  /*background-size: cover;*/
+  color: #fff;
+  font-family: 'Lato', sans-serif;
+}
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+h1 {
+  text-align: center;
+  margin: 80px auto 100px auto;
+  text-transform: uppercase;
+}
+.quote-conteiner {
+  height: 150px;
+}
+#get-quote {
+  margin-top: 150px;
+}
+.btn {
+  display: block;
+  margin: 40px auto;
+  width: 400px;
+  background-color: transparent;
+  border: 1px solid #fff;
+  color: #fff;
+  font-size: 20px;
+}
+.btn:hover {
+  border: 1px solid #00aced;
+}
+.btn:hover, a:hover {
+  background-color: #fff;
+  color: #00aced;
+  text-decoration: none;
+}
+.btn:hover a {
+  color: #00aced;
+}
+a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 20px;
+}
