@@ -30,3 +30,9 @@ function showCountriesList(resp){
     $('<td>').text(item.population).appendTo(tr);
   });
 };
+$('#country-name').keypress(function(event){
+  if(event.keyCode === 13){
+    searchCountries();
+    console.log('pressed enter');
+  }
+});
