@@ -109,3 +109,6 @@ $(function(){
   todoColumn.addCard(card1);
   doingColumn.addCard(card2);
 });
+$('.card-description').click(function(){
+  $('.card').css("border", "1px solid #fff");
+});
