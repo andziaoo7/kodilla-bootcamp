@@ -44,6 +44,9 @@ h1, h2 {
   text-align: center;
   margin-bottom: 20px;
 }
+.card {
+  vertical-align: middle;
+}
 .add-card, .btn-delete {
   flex-grow: 1;
   margin: 5% 10%;
@@ -51,22 +54,24 @@ h1, h2 {
 }
 .card-description {
   width: 90%;
+  padding-left: 5px;
+  margin: 14px 0;
+  font-size: 17px;
 }
 .btn-delete-task, .card-description {
   display: inline-flex;
 }
+.btn-delete-task {
+  padding: 1px 5px;
+}
 .card-list {
   min-height: 100px;
   list-style-type: none;
+  padding: 0px 20px;
 }
-.card-placeholder {
-  height: 10px;
-  color: red;
-  background-color: transparent;
-}
-.ui-sortable-helper {
-  border: 1px solid #fff;
-  border-radius: 1px;
-  padding: 5px;
-  height: 40px;
+.ui-sortable-placeholder {
+  border: 3px dashed #fff;
+  height: 50px;
+  width: 100%;
+  background: #a3a3a3;
 }
