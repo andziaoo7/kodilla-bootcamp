@@ -1,21 +1,23 @@
 function Column(id, name) {
+	var self = this;
 	this.id = id;
 	this.name = name || 'Nie podano nazwy';
+	this.element = createColumn();
 
 	function createColumn() {
 		// TWORZENIE NOWYCH WĘZŁÓW
-		var column = $('<div class="column"></div>');
-		var columnTitle = $('<h2 class="column-title">' + self.name + '</h2>');
-		var columnCardList = $('<ul class="card-list"></ul>');
-		var columnDelete = $('<button class="btn-delete">x</button>');
-		var columnAddCard = $('<button class="column-add-card">Dodaj kartę</button>');
+		var $column = $('<div class="column"></div>');
+		var $columnTitle = $('<h2 class="column-title">' + self.name + '</h2>');
+		var $columnCardList = $('<ul class="card-list"></ul>');
+		var $columnDelete = $('<button class="btn-delete">x</button>');
+		var $columnAddCard = $('<button class="column-add-card">Dodaj kartę</button>');
 
 		// PODPINANIE ODPOWIEDNICH ZDARZEŃ POD WĘZŁY
-		columnDelete.click(function() {
+		$columnDelete.click(function() {
 			self.deleteColumn();
 		});
 
-		columnAddCard.click(function(event) {
+		$columnAddCard.click(function(event) {
 			var cardName = prompt("Wpisz nazwę karty");
 			event.preventDefault();
 			$.ajax({
@@ -33,15 +35,15 @@ function Column(id, name) {
 		});
 
 			// KONSTRUOWANIE ELEMENTU KOLUMNY
-		column.append(columnTitle)
-			.append(columnDelete)
-			.append(columnAddCard)
-			.append(columnCardList);
-			return column;
+		$column.append($columnTitle)
+			.append($columnDelete)
+			.append($columnAddCard)
+			.append($columnCardList);
+			return $column;
 		}
 	}
 Column.prototype = {
-	createCard: function(card) {
+	addCard: function(card) {
 	  this.element.children('ul').append(card.element);
 	},
 	deleteColumn: function() {
