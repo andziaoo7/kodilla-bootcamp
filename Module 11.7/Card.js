@@ -6,18 +6,18 @@ function Card(id, name) {
 	this.element = createCard();
 
 	function createCard() {
-		var $card = $('<li class="card"></li>');
-		var $cardDeleteBtn = $('<button class="btn-delete">x</button>');
-		var $cardDescription = $('<p class="card-description"></p>');
+		var card = $('<li class="card"></li>');
+		var cardDeleteBtn = $('<button class="btn-delete">x</button>');
+		var cardDescription = $('<p class="card-description"></p>');
 
-		$cardDeleteBtn.click(function(){
+		cardDeleteBtn.click(function(){
 			self.removeCard();
 		});
 
-		$card.append($cardDeleteBtn);
-		$cardDescription.text(self.name);
-		$card.append($cardDescription)
-		return $card;
+		card.append(cardDeleteBtn);
+		cardDescription.text(self.name);
+		card.append(cardDescription)
+		return card;
 	}
 }
 Card.prototype = {

@@ -21,10 +21,10 @@ $(function(){
   var board = {
     name: 'Tablica Kanban',
     createColumn: function(column) {
-      this.element.append(column.element);
+      this.$element.append(column.$element);
       initSortable();
     },
-    element: $('#board .column-container')
+    $element: $('#board .column-container')
   };
 
   $('.create-column')
@@ -42,27 +42,27 @@ $(function(){
 
     function createColumn() {
       // TWORZENIE NOWYCH WĘZŁÓW
-      var column = $('<div class="column"></div>');
-      var columnTitle = $('<h2 class="column-title">' + self.name + '</h2>');
-      var columnCardList = $('<ul class="card-list"></ul>');
-      var columnDelete = $('<button class="btn-delete">x</button>');
-      var columnAddCard = $('<button class="column-add-card">Dodaj kartę</button>');
+      var $column = $('<div class="column"></div>');
+      var $columnTitle = $('<h2 class="column-title">' + self.name + '</h2>');
+      var $columnCardList = $('<ul class="card-list"></ul>');
+      var $columnDelete = $('<button class="btn-delete">x</button>');
+      var $columnAddCard = $('<button class="column-add-card">Dodaj kartę</button>');
 
       // PODPINANIE ODPOWIEDNICH ZDARZEŃ POD WĘZŁY
-      columnDelete.click(function() {
+      $columnDelete.click(function() {
         self.deleteColumn();
       });
-      columnAddCard.click(function(event) {
+      $columnAddCard.click(function(event) {
         event.preventDefault();
         self.createCard(new Card(prompt("Wpisz nazwę karty")));
       });
 
       // KONSTRUOWANIE ELEMENTU KOLUMNY
-      column.append(columnTitle)
-      .append(columnDelete)
-      .append(columnAddCard)
-      .append(columnCardList);
-      return column;
+      $column.append($columnTitle)
+      .append($columnDelete)
+      .append($columnAddCard)
+      .append($columnCardList);
+      return $column;
     }
   }
   Column.prototype = {
@@ -83,16 +83,16 @@ $(function(){
     this.element = createCard();
 
     function createCard() {
-      var card = $('<li class="card"></li>');
-      var cardDeleteBtn = $('<button class="btn-delete">x</button>');
-      var cardDescription = $('<p class="card-description"></p>');
-      cardDeleteBtn.click(function(){
+      var $card = $('<li class="card"></li>');
+      var $cardDeleteBtn = $('<button class="btn-delete">x</button>');
+      var $cardDescription = $('<p class="card-description"></p>');
+      $cardDeleteBtn.click(function(){
         self.removeCard();
       });
-      card.append(cardDeleteBtn);
-      cardDescription.text(self.description);
-      card.append(cardDescription)
-      return card;
+      $card.append($cardDeleteBtn);
+      $cardDescription.text(self.description);
+      $card.append($cardDescription)
+      return $card;
     }
   }
   Card.prototype = {
