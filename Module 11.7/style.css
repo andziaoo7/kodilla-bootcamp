@@ -1,4 +1,9 @@
-body {margin: 0;}
+body {
+  margin: 0;
+  background-image: url('https://cdn.pbrd.co/images/fgRzfJwfO.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 * {box-sizing: border-box;}
 
 .ui-sortable {
@@ -34,6 +39,8 @@ body {margin: 0;}
   margin-left: 8px;
   list-style: none;
   position: relative;
+  text-align: center;
+  background: rgba(34,34,34,0.5);
 }
 .column-add-card {
   cursor: pointer;
